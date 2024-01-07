@@ -1,0 +1,39 @@
+
+Aqui está uma lista de exercícios sobre ArrayList, abordando os principais métodos e todo o básico sobre a classe:
+
+Criação e manipulação de ArrayLists
+
+Crie um ArrayList vazio.
+Adicione elementos a um ArrayList.
+Remova elementos de um ArrayList.
+Obtenha o tamanho de um ArrayList.
+Obtenha o elemento em uma posição específica de um ArrayList.
+Substitua um elemento em uma posição específica de um ArrayList.
+Ordene um ArrayList.
+Exercícios básicos
+
+Crie um ArrayList para armazenar uma lista de nomes.
+Adicione os nomes "João", "Maria", "Pedro" e "Ana" ao ArrayList.
+Remova o nome "João" do ArrayList.
+Obtenha o tamanho do ArrayList.
+Obtenha o nome na posição 0 do ArrayList.
+Substitua o nome na posição 1 do ArrayList por "José".
+Ordene o ArrayList em ordem alfabética.
+Exercícios mais avançados
+
+Crie um ArrayList para armazenar uma lista de números inteiros.
+Adicione os números 1, 2, 3, 4, 5 e 6 ao ArrayList.
+Remova o número 3 do ArrayList.
+Obtenha o tamanho do ArrayList.
+Obtenha o número na posição 0 do ArrayList.
+Substitua o número na posição 1 do ArrayList por 10.
+Ordene o ArrayList em ordem crescente.
+Ao praticar esses exercícios, você aprenderá a usar os principais métodos da classe ArrayList e a entender os conceitos básicos de listas.
+
+Aqui estão alguns exemplos específicos de exercícios que você pode tentar:
+
+Crie um ArrayList para armazenar uma lista de notas de um aluno.
+Adicione as notas 7, 8, 9 e 10 ao ArrayList.
+Obtenha a média das notas do aluno.
+Remova a nota mais baixa do ArrayList.
+Ordene as notas do aluno em ordem decrescente.
