@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class GerenciamentoNotas {
     static Scanner input = new Scanner(System.in);
-    static List<Aluno> alunos= new ArrayList<>();
+    private static List<Aluno> alunos= new ArrayList<>();
     private static int matricula = 0001;
 
     private static boolean ordemDesligamento = false;
@@ -18,15 +18,8 @@ public class GerenciamentoNotas {
         }while(!ordemDesligamento);
     }
 
-    public static void acresentaMatricula(){
-        matricula ++;
-    }
-
     public static void sistema(){
-        System.out.println("Escolha uma opção: ");
-        System.out.println("1- Cria aluno;\n 2- Adiciona nota;\n 3- Remove nota;\n 4- Obtem o tamanho da lista;\n " +
-                "5- Obtem nota especifica;\n 6- Obtem lista de notas;\n 7- Ordena lista de notas;\n 8- Termina o programa;\n");
-        int opcao = input.nextInt();
+        int opcao = opcaoUsuario();
         switch (opcao){
             case 1:
                 criaAluno();
@@ -128,6 +121,17 @@ public class GerenciamentoNotas {
         aluno.ordenaNotas();
     }
 
+    public static void acresentaMatricula(){
+        matricula ++;
+    }
+
+    public static int opcaoUsuario(){
+        System.out.println("Escolha uma opção: ");
+        System.out.println("1- Cria aluno;\n 2- Adiciona nota;\n 3- Remove nota;\n 4- Obtem o tamanho da lista;\n " +
+                "5- Obtem nota especifica;\n 6- Obtem lista de notas;\n 7- Ordena lista de notas;\n 8- Termina o programa;\n");
+        int opcao = input.nextInt();
+        return opcao;
+    }
 
 
 
