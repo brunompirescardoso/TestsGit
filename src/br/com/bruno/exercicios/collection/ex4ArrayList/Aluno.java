@@ -16,7 +16,7 @@ public class Aluno {
 
     @Override
     public String toString() {
-        return this.nome.toString();
+        return this.notas.toString();
     }
 
     public String getNome() {
