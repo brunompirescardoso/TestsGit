@@ -8,8 +8,6 @@ import java.util.Scanner;
 public class GerenciamentoNotas {
     static Scanner input = new Scanner(System.in);
     private static List<Aluno> alunos= new ArrayList<>();
-    private static int matricula = 0001;
-
     private static boolean ordemDesligamento = false;
 
     public static void main(String[] args) {
@@ -70,8 +68,7 @@ public class GerenciamentoNotas {
     public static void criaAluno(){
         System.out.println("Insira o nome do aluno: ");
         String nome = input.next();
-        String numero = Integer.toString(matricula);
-        acresentaMatricula();
+
         alunos.add(new Aluno(nome));
     }
 
@@ -121,9 +118,6 @@ public class GerenciamentoNotas {
         aluno.ordenaNotas();
     }
 
-    public static void acresentaMatricula(){
-        matricula ++;
-    }
 
     public static int opcaoUsuario(){
         System.out.println("Escolha uma opção: ");
