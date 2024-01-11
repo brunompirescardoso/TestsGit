@@ -1,0 +1,107 @@
+Projeto de nível intermediário para treinar ArrayList
+
+Este projeto irá implementar um sistema de gerenciamento de notas de alunos. O sistema irá permitir que os usuários criem alunos, adicionem notas, removam notas, obtenham o tamanho da lista de notas, obtenham a nota na posição específica e ordene a lista de notas em ordem crescente.
+
+Requisitos
+
+O sistema deve permitir que os usuários criem alunos.
+O sistema deve permitir que os usuários adicionem notas a alunos.
+O sistema deve permitir que os usuários removam notas de alunos.
+O sistema deve permitir que os usuários obtenham o tamanho da lista de notas de um aluno.
+O sistema deve permitir que os usuários obtenham a nota na posição específica de uma lista de notas.
+O sistema deve permitir que os usuários ordenem a lista de notas de um aluno em ordem crescente.
+Implementação
+
+A implementação do sistema pode ser feita usando a seguinte estrutura:
+
+A classe Aluno deve representar um aluno. A classe deve ter os seguintes atributos:
+nome: O nome do aluno.
+notas: Uma lista de notas do aluno.
+A classe Nota deve representar uma nota. A classe deve ter os seguintes atributos:
+valor: O valor da nota.
+A classe GerenciadorDeNotas deve representar o sistema de gerenciamento de notas. A classe deve ter os seguintes métodos:
+criarAluno(nome): Cria um novo aluno com o nome especificado.
+adicionarNota(aluno, nota): Adiciona a nota especificada à lista de notas do aluno especificado.
+removerNota(aluno, nota): Remove a nota especificada da lista de notas do aluno especificado.
+obterTamanhoListaDeNotas(aluno): Obtém o tamanho da lista de notas do aluno especificado.
+obterNotaNaPosicao(aluno, posicao): Obtém a nota na posição especificada da lista de notas do aluno especificado.
+ordenarListaDeNotas(aluno): Ordena a lista de notas do aluno especificado em ordem crescente.
+Exemplo de código
+
+O seguinte código é um exemplo de como implementar o sistema:
+
+public class Aluno {
+
+    private String nome;
+    private List<Nota> notas;
+
+    public Aluno(String nome) {
+        this.nome = nome;
+        this.notas = new ArrayList<>();
+    }
+
+    public String getNome() {
+        return this.nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public List<Nota> getNotas() {
+        return this.notas;
+    }
+
+    public void adicionarNota(Nota nota) {
+        this.notas.add(nota);
+    }
+
+    public void removerNota(Nota nota) {
+        this.notas.remove(nota);
+    }
+}
+
+public class Nota {
+
+    private int valor;
+
+    public Nota(int valor) {
+        this.valor = valor;
+    }
+
+    public int getValor() {
+        return this.valor;
+    }
+
+    public void setValor(int valor) {
+        this.valor = valor;
+    }
+}
+
+public class GerenciadorDeNotas {
+
+    public Aluno criarAluno(String nome) {
+        return new Aluno(nome);
+    }
+
+    public void adicionarNota(Aluno aluno, Nota nota) {
+        aluno.getNotas().add(nota);
+    }
+
+    public void removerNota(Aluno aluno, Nota nota) {
+        aluno.getNotas().remove(nota);
+    }
+
+    public int obterTamanhoListaDeNotas(Aluno aluno) {
+        return aluno.getNotas().size();
+    }
+
+    public Nota obterNotaNaPosicao(Aluno aluno, int posicao) {
+        return aluno.getNotas().get(posicao);
+    }
+
+    public void ordenarListaDeNotas(Aluno aluno) {
+        aluno.getNotas().sort(new Comparator<Nota>() {
+            @Override
+            public int compare(Nota nota1, Nota nota2) {
+                return nota1.getValor() - nota2.getValor();
