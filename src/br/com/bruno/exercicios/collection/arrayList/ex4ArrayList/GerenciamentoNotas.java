@@ -53,8 +53,8 @@ public class GerenciamentoNotas {
 
     public static int opcaoUsuario(){
         System.out.println("Escolha uma opção: ");
-        System.out.println("1- Cria aluno;\n 2- Adiciona nota;\n 3- Remove nota;\n 4- Obtem o tamanho da lista;\n " +
-                "5- Obtem nota especifica;\n 6- Obtem lista de notas;\n 7- Ordena lista de notas;\n 8- Termina o programa;\n");
+        System.out.println("1- Cria aluno;\n2- Adiciona nota;\n3- Remove nota;\n4- Obtem o tamanho da lista;\n" +
+                "5- Obtem nota especifica;\n6- Obtem lista de notas;\n7- Ordena lista de notas;\n8- Termina o programa;\n");
         int opcao = input.nextInt();
         return opcao;
     }
