@@ -57,23 +57,6 @@ public class GerenciamentoNotas {
 
 
 
-
-
-
-    }
-
-
-
-
-
-
-
-
-    public static String obtemLista(String nome){
-        Aluno aluno = procuraAluno(nome);
-        return aluno.toString();
-    }
-
     public static void ordenaLista(String nome){
         Aluno aluno = procuraAluno(nome);
         aluno.ordenaNotas();
@@ -135,6 +118,9 @@ public class GerenciamentoNotas {
         int index = input.nextInt();
 
         return alunoSelecionado.getNotas(index);
+    }
+    public static String obtemLista(String nome){
+        return alunoSelecionado.toString();
     }
 
 
