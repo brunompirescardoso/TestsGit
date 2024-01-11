@@ -1,4 +1,4 @@
-package br.com.bruno.exercicios.collection.ex4ArrayList;
+package br.com.bruno.exercicios.collection.arrayList.ex4ArrayList;
 
 public class Nota implements Comparable<Nota>{
     private double valor;

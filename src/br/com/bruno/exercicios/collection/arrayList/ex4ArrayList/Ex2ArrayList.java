@@ -1,4 +1,4 @@
-package br.com.bruno.exercicios.collection;
+package br.com.bruno.exercicios.collection.arrayList.ex4ArrayList;
 
 import java.util.Collections;
 import java.util.List;

@@ -1,4 +1,4 @@
-package br.com.bruno.exercicios.collection.ex4ArrayList;
+package br.com.bruno.exercicios.collection.arrayList.ex4ArrayList;
 
 
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class GerenciamentoNotas {
     static Scanner input = new Scanner(System.in);
     private static List<Aluno> alunos= new ArrayList<>();
-    private static boolean ordemDesligamento = false;git
+    private static boolean ordemDesligamento = false;
 
     public static void main(String[] args) {
         do{
