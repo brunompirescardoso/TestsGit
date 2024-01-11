@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class GerenciamentoNotas {
     static Scanner input = new Scanner(System.in);
     private static List<Aluno> alunos= new ArrayList<>();
-    private static boolean ordemDesligamento = false;
+    private static boolean ordemDesligamento = false;git
 
     public static void main(String[] args) {
         do{
