@@ -10,9 +10,13 @@ public class GerenciamentoNotas {
     private static List<Aluno> alunos= new ArrayList<>();
     private static boolean ordemDesligamento = false;
 
+    private static Aluno alunoSelecionado;
+
     public static void main(String[] args) {
+
         do{
             sistema();
+            alunoSelecionado = procuraAluno();
         }while(!ordemDesligamento);
     }
 
@@ -23,18 +27,10 @@ public class GerenciamentoNotas {
                 criaAluno();
                 break;
             case 2:
-                System.out.println("Digite o nome do aluno: ");
-                String nome = input.next();
-                System.out.println("Digite a nota: ");
-                int nota = input.nextInt();
-                adicionaNota(procuraAluno(nome), nota);
+                adicionaNota();
                 break;
             case 3:
-                System.out.println("Digite o nome do aluno: ");
-                String nomeAluno = input.next();
-                System.out.println("Digite a nota que deseja remover: ");
-                double notaAluno = input.nextDouble();
-                removeNota(nomeAluno, notaAluno);
+                removeNota();
                 break;
             case 4:
                 System.out.println("Digite o nome do aluno: ");
@@ -65,38 +61,15 @@ public class GerenciamentoNotas {
         }
     }
 
-    public static void criaAluno(){
-        System.out.println("Insira o nome do aluno: ");
-        String nome = input.next();
 
-        alunos.add(new Aluno(nome));
-    }
 
-    public static Aluno procuraAluno(String nome){
-        Aluno aluno = null;
-        for(Aluno a: alunos){
-            if(a.getNome().equals(nome)){
-                aluno = a;
-                return aluno;
-            }
-        }
-        return aluno;
-    }
 
-    public static void removeNota(String nome, double nota){
-        Aluno aluno = procuraAluno(nome);
-        for(int x = 0; x <= aluno.tamanhoNotas(); x ++){
-            if(aluno.getNotas(x).equals(nota)){
-                aluno.removeNotas(x);
-            }
-        }
+
+
     }
 
 
-    public static void adicionaNota(Aluno aluno, double valor){
-        aluno.setNotas(valor);
-        System.out.println("Nota " + valor + "adicionada!!");
-    }
+
 
     public static int tamanhoLista(String nome){
         Aluno aluno = procuraAluno(nome);
@@ -127,8 +100,44 @@ public class GerenciamentoNotas {
         return opcao;
     }
 
+    public static Aluno procuraAluno() {
+        System.out.println("Insira o nome do aluno: ");
+        String nome = input.next();
 
+        Aluno aluno = null;
+        for (Aluno a : alunos) {
+            if (a.getNome().equals(nome)) {
+                aluno = a;
+                return aluno;
+            }
+        }
+        return aluno;
+    }
+    public static void criaAluno(){
+        System.out.println("Insira o nome do aluno: ");
+        String nome = input.next();
 
+        alunos.add(new Aluno(nome));
+    }
+
+    public static void adicionaNota(){
+        System.out.println("Digite a nota que deseja inserir: ");
+        int valor = input.nextInt();
+
+        alunoSelecionado.setNotas(valor);
+        System.out.println("Nota " + valor + "adicionada!!");
+    }
+
+    public static void removeNota() {
+        System.out.println("Digite a nota que deseja remover: ");
+        int nota = input.nextInt();
+
+        for (int x = 0; x <= alunoSelecionado.tamanhoNotas(); x++) {
+            if (alunoSelecionado.getNotas(x).equals(nota)) {
+                alunoSelecionado.removeNotas(x);
+            }
+        }
+    }
 
 
 
