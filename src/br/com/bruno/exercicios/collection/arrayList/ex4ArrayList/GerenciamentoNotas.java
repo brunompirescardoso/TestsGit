@@ -33,9 +33,7 @@ public class GerenciamentoNotas {
                 removeNota();
                 break;
             case 4:
-                System.out.println("Digite o nome do aluno: ");
-                String nomeAlunoTamanho = input.next();
-                System.out.println(tamanhoLista(nomeAlunoTamanho));
+                tamanhoLista();
                 break;
             case 5:
                 System.out.println("Digite o nome do aluno: ");
@@ -71,10 +69,7 @@ public class GerenciamentoNotas {
 
 
 
-    public static int tamanhoLista(String nome){
-        Aluno aluno = procuraAluno(nome);
-        return aluno.tamanhoNotas();
-    }
+
 
     public static Nota obtemNota(String nome, int index){
         Aluno aluno = procuraAluno(nome);
@@ -137,6 +132,10 @@ public class GerenciamentoNotas {
                 alunoSelecionado.removeNotas(x);
             }
         }
+    }
+
+    public static int tamanhoLista(){
+        return alunoSelecionado.tamanhoNotas();
     }
 
 
