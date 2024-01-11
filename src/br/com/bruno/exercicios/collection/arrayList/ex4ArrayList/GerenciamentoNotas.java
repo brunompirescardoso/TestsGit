@@ -39,14 +39,10 @@ public class GerenciamentoNotas {
                 System.out.println("Nota: " + obtemNota());
                 break;
             case 6:
-                System.out.println("Digite o nome do aluno: ");
-                String nomeAlunoLista = input.next();
-                System.out.println(obtemLista(nomeAlunoLista));
+                System.out.println(obtemLista());
                 break;
             case 7:
-                System.out.println("Digite o nome do aluno: ");
-                String nomeAlunoOrdena = input.next();
-                ordenaLista(nomeAlunoOrdena);
+                ordenaLista();
                 break;
             case 8:
                 ordemDesligamento = true;
@@ -54,14 +50,6 @@ public class GerenciamentoNotas {
                 System.out.println("Opção inválida, tente novament!!!!");
         }
     }
-
-
-
-    public static void ordenaLista(String nome){
-        Aluno aluno = procuraAluno(nome);
-        aluno.ordenaNotas();
-    }
-
 
     public static int opcaoUsuario(){
         System.out.println("Escolha uma opção: ");
@@ -119,8 +107,12 @@ public class GerenciamentoNotas {
 
         return alunoSelecionado.getNotas(index);
     }
-    public static String obtemLista(String nome){
+    public static String obtemLista(){
         return alunoSelecionado.toString();
+    }
+
+    public static void ordenaLista(){
+        alunoSelecionado.ordenaNotas();
     }
 
 
