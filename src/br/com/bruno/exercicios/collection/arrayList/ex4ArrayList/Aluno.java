@@ -16,7 +16,7 @@ public class Aluno {
 
     @Override
     public String toString() {
-        return this.notas.toString();
+        return this.notas.toString().toString();
     }
 
     public String getNome() {
@@ -27,8 +27,8 @@ public class Aluno {
         this.notas.add(new Nota(nota));
     }
 
-    public Nota getNotas(int index) {
-        return this.notas.get(index);
+    public double getNotas(int index) {
+        return this.notas.get(index).getValor();
     }
 
     public void removeNotas(int index){
