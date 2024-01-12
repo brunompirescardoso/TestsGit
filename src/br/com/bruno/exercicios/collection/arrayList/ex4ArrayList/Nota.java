@@ -7,6 +7,11 @@ public class Nota implements Comparable<Nota>{
         this.valor = valor;
     }
 
+    @Override
+    public String toString() {
+        return "Nota: " + this.valor;
+    }
+
     public double getValor() {
         return this.valor;
     }

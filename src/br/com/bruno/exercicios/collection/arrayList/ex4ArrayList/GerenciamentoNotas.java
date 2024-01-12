@@ -16,7 +16,6 @@ public class GerenciamentoNotas {
 
         do{
             sistema();
-            alunoSelecionado = procuraAluno();
         }while(!ordemDesligamento);
     }
 
@@ -25,6 +24,7 @@ public class GerenciamentoNotas {
         switch (opcao){
             case 1:
                 criaAluno();
+                alunoSelecionado = procuraAluno();
                 break;
             case 2:
                 adicionaNota();
@@ -46,6 +46,7 @@ public class GerenciamentoNotas {
                 break;
             case 8:
                 ordemDesligamento = true;
+                break;
             default:
                 System.out.println("Opção inválida, tente novament!!!!");
         }
@@ -60,7 +61,7 @@ public class GerenciamentoNotas {
     }
 
     public static Aluno procuraAluno() {
-        System.out.println("Insira o nome do aluno: ");
+        System.out.println("Insira o nome do aluno ao qual serão feitas alterações: ");
         String nome = input.next();
 
         Aluno aluno = null;
@@ -84,15 +85,15 @@ public class GerenciamentoNotas {
         int valor = input.nextInt();
 
         alunoSelecionado.setNotas(valor);
-        System.out.println("Nota " + valor + "adicionada!!");
+        System.out.println("Nota " + valor + " adicionada!!");
     }
 
     public static void removeNota() {
         System.out.println("Digite a nota que deseja remover: ");
         int nota = input.nextInt();
 
-        for (int x = 0; x <= alunoSelecionado.tamanhoNotas(); x++) {
-            if (alunoSelecionado.getNotas(x).equals(nota)) {
+        for (int x = 0; x <= alunoSelecionado.tamanhoNotas() - 1; x++) {
+            if (alunoSelecionado.getNotas(x) == nota) {
                 alunoSelecionado.removeNotas(x);
             }
         }
@@ -101,7 +102,7 @@ public class GerenciamentoNotas {
     public static int tamanhoLista(){
         return alunoSelecionado.tamanhoNotas();
     }
-    public static Nota obtemNota(){
+    public static double obtemNota(){
         System.out.println("Digite o indice da nota que deseja remover: ");
         int index = input.nextInt();
 
